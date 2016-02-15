@@ -36,8 +36,8 @@ CPM_AddModule("SSVCMake"
 SET(CMAKE_MODULE_PATH ${CPM_KV_SOURCEDIR_MAP_SSVCMake}/cmake/modules ${CMAKE_MODULE_PATH})
 include(SSVCMake)
 
-SSVCMake_setDefaults()
-find_package(LUA REQUIRED)
-SSVCMake_setAndInstallHeaderOnly()
+#SSVCMake_setDefaults()
+#find_package(LUA REQUIRED)
+#SSVCMake_setAndInstallHeaderOnly()
 
 CPM_InitModule(${CPM_MODULE_NAME})
