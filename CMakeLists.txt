@@ -28,9 +28,16 @@ else()
 	endif()
 	include(${CPM_DIR}/CPM.cmake)
 endif()
+
+SET(SSVDepsRoot "https://github.com/lukeadams/")
+CPM_AddModule("SSVCMake"
+	GIT_REPOSITORY "${SSVDepsRoot}SSVCMake"
+	GIT_TAG "cpm")
+SET(CMAKE_MODULE_PATH ${CPM_KV_SOURCEDIR_MAP_SSVCMake}/cmake/modules ${CMAKE_MODULE_PATH})
 include(SSVCMake)
 
 SSVCMake_setDefaults()
 find_package(LUA REQUIRED)
 SSVCMake_setAndInstallHeaderOnly()
+
 CPM_InitModule(${CPM_MODULE_NAME})
